@@ -84,4 +84,8 @@ int main(int argc, const char * argv[]) {
     libusb_device *device = devs[i];
     printDev(device);
   }
+
+  libusb_free_device_list(devs, 1);
+  libusb_exit(NULL);
+  return 0;
 }
